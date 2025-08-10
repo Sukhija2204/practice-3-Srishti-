@@ -1,0 +1,89 @@
+/* Light Theme (default) */
+:root {
+  --bg-color: white;
+  --text-color: black;
+  --sidebar-bg: #f2f2f2;
+  --link-color: #cc3366;
+  --header-footer-bg: #4CAF50;
+  --footer-text-color: white;
+}
+
+/* Dark Theme Overrides */
+body.dark-mode {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --sidebar-bg: #1f1f1f;
+  --link-color: #cc66cc;
+  --header-footer-bg: #222222;
+  --footer-text-color: #dddddd;
+}
+
+/* Layout */
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background-color: var(--header-footer-bg);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+}
+
+.theme-toggle {
+  color: white;
+  font-size: 14px;
+}
+
+/* Sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-color: var(--sidebar-bg);
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar a {
+  color: var(--link-color);
+  text-decoration: none;
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* Main */
+.main {
+  grid-area: main;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  grid-area: footer;
+  background-color: var(--header-footer-bg);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
