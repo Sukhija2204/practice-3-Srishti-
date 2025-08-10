@@ -1,5 +1,7 @@
 ## HTML Simple Template
 
+**Live Demo:** [Click here to view](https://srishti-practice3.bytexl.live/)
+
 This is a simple HTML template that can be used to create a simple HTML page(s).
 
 ## How to run
